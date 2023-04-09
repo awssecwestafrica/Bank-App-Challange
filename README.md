@@ -13,7 +13,7 @@ follow the steps below
 
 !! Please ensure you have node installed in your system and if you dont use this link to https://kinsta.com/blog/how-to-install-node-js/
 
-3 - Then type 'npm istall' this will install all the needed dependences for the project
+3 - Then type 'npm install' this will install all the needed dependences for the project
 
 4 - Then type 'npm start' this will start on development mode. Open http://localhost:3000 to view it in the browser.
 
