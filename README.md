@@ -23,4 +23,14 @@ if you have any issues; use 'npm audit fix' will automatically fix issues
 ![2nd shot](https://user-images.githubusercontent.com/47798540/230577186-910c1f40-258d-4f37-9264-8225c8c09e31.png)
 
 ## DOCKERIZE THE APPLICATION
+For this we can use our local system to create docker images for the appplication. This will require installing docker, docker-cli, docker-compose and docker-desktop on the local machine. Alternatively, we can use a development environment like gitpod which provides a seamless environment for application development. Gitpod is a cloud development environment for teams to efficiently and securely develop software. [gitpod.io](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwijxoferrP-AhXUiP0HHY4TASQQFnoECA8QAQ&url=https%3A%2F%2Fwww.gitpod.io%2F&usg=AOvVaw39pWIjZuoC3seiZXQfgf01).
 
+Now, we want to dockerize the application and run it as docker containers. We create a Dockerfile and put the following code.
+
+        FROM node:alpine3.16
+        WORKDIR /client
+        COPY . .
+        RUN npm install 
+        EXPOSE 3000
+        CMD ["npm", "start"]
+In the Dockerfile above, we use a node:alpine3.16 as a base image, this gives us a small image size.
