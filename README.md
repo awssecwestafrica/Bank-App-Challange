@@ -66,8 +66,8 @@ See User Settings for more ways to customize Gitpod.
 Opening a repository in Gitpod starts a workspace and clones the source code. To start developing though, you would then have to install any required dependencies, run any build scripts and start servers. Luckily, with Gitpod, we can automate all of those steps.
 
 1. Add a .gitpod.yml at the root of your repository.
--You can use gp init to quickly generate the .gitpod.yml file.
-2. Use the gp validate command to validate your configuration is working.
+-You can use `gp init` to quickly generate the .gitpod.yml file.
+2. Use the `gp validate` command to validate your configuration is working.
 3. Commit and push to apply the configuration for all subsequent workspace starts.
 
 Every opened workspace will now run the steps defined in your gitpod.yml.
