@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node:alpine3.16
 WORKDIR /client
 COPY . .
-RUN npm i
+RUN npm install 
 EXPOSE 3000
 CMD ["npm", "start"]
