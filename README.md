@@ -1,11 +1,11 @@
 # Bank-App-Challange
-Deploy testing automation tool, commission Infrastructure and configure monitoring and alerting integration with grafana
+Deploy testing automation tool, commission Infrastructure and configure monitoring and alerting integration with grafana.
 
-So because it's a bank tech challenge i decided to simulate a simple bank Application built with JavaScript. then running dependencies and framework test i decided to add some react component.
+So because it's a bank tech challenge i decided to simulate a simple bank Application built with JavaScript. Then running dependencies and framework test, i decided to add some react component.
 
-To run this app on your PC is simple;
+To run this app on your PC is simple.
 
-follow the steps below
+Follow the steps below:
 
 1 - clone app Repo
 
