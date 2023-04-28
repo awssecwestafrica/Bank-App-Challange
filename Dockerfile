@@ -3,7 +3,7 @@ WORKDIR /client
 COPY . .
 RUN npm install
 RUN npm run build 
-
+#test
 FROM nginx:1.19.0
 COPY  --from=build /client/build /usr/share/nginx/html
 EXPOSE 80
