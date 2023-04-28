@@ -1,7 +1,7 @@
 FROM node:alpine3.16 AS build
 WORKDIR /client
 COPY . .
-RUN npm install 
+RUN npm install
 RUN npm run build 
 
 FROM nginx:1.19.0
