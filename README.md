@@ -14,11 +14,11 @@ Follow the steps below:
 
 !! Please ensure you have node installed in your system and if you don't use this link to https://kinsta.com/blog/how-to-install-node-js/
 
-3 - Then type 'npm install' this will install all the needed dependencies for the project
+3 - Then type `npm install` this will install all the needed dependencies for the project
 
-4 - Then type 'npm start' this will start on development mode. Open http://localhost:3000 to view it in the browser.
+4 - Then type `npm start` this will start on development mode. Open http://localhost:3000 to view it in the browser.
 
-if you have any issues; use 'npm audit fix' will automatically fix issues
+if you have any issues; use `npm audit fix` will automatically fix issues
 
 ![1st screen](https://user-images.githubusercontent.com/47798540/230577095-257d8e97-3176-4172-b5d9-67fa2637d122.png)
 
