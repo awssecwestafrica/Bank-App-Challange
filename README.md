@@ -25,4 +25,9 @@ if you have any issues; use 'npm audit fix' will automatically fix issues
 
 ## Using Docker
 
-1. Install docker desktop
+1. Download and install Docker Desktop
+https://www.docker.com/products/docker-desktop/
+2. Open Docker Desktop
+3. Navigate to the project directory
+4. Open terminal and run
+` docker build -t devopsbank:v1 . `
