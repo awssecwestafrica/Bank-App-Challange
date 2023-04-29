@@ -21,7 +21,8 @@ Follow the steps below:
 if you have any issues; use 'npm audit fix' will automatically fix issues
 
 ![1st screen](https://user-images.githubusercontent.com/47798540/230577095-257d8e97-3176-4172-b5d9-67fa2637d122.png)
-![2nd shot](https://user-images.githubusercontent.com/47798540/230577186-910c1f40-258d-4f37-9264-8225c8c09e31.png)
+
+<!-- ![2nd shot](https://user-images.githubusercontent.com/47798540/230577186-910c1f40-258d-4f37-9264-8225c8c09e31.png) -->
 
 ## Using Docker
 
