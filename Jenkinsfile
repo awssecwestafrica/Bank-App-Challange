@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
+        stage('Checkout SCM') {
             steps {
                 // Checkout the source code from version control (e.g., Git)
                 git 'https://github.com/Taiwolawal/Bank-App-Challange.git'
