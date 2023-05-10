@@ -23,4 +23,13 @@ const createCustomer = async (req, res) => {
 	}
 };
 
-module.exports = { createCustomer };
+const getCustomers = async (req, res)=> {
+	try{
+		const customers = await Customer.find().select("id name account_no balance")
+		return res.status(200).json({customers})
+	}catch(err){
+		return res.status(500).json({error: err.message})
+	}
+}
+
+module.exports = { createCustomer, getCustomers };
