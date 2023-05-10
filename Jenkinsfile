@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Checkout the source code from version control (e.g., Git)
                 git 'https://github.com/Taiwolawal/Bank-App-Challange.git'
-                sh "echo Git repo"
+                
             }
         }
         
