@@ -7,6 +7,8 @@ const { json, urlencoded } = require("express");
 
 const { db } = require("./database");
 
+const customerRouter = require("../api/v1/routes/customerRoute")
+
 const app = express();
 
 db.once("open", () => console.log("Database connected"));
@@ -19,8 +21,10 @@ app.use(helmet())
 app.use(json());
 app.use(urlencoded({ extended: false }));
 
-app.use("", (req, res) => {
-	return res.status(200).json("Hello!");
+app.use("/api/v1/customer", customerRouter)
+
+app.use((req, res) => {
+	return res.status(404).json({error: "Page not found"});
 });
 
 module.exports = app;
