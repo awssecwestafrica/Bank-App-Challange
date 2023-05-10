@@ -7,6 +7,7 @@ pipeline {
                 // Checkout the source code from version control (e.g., Git)
                 // git 'https://github.com/Taiwolawal/Bank-App-Challange.git'
                 sh 'git --version'
+                sh 'git remote -v'
                 
             }
         }
