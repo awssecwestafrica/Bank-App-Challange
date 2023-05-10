@@ -1,4 +1,3 @@
-const Customer = require("../../models/Customer");
 const { body } = require("express-validator");
 
 const createCustomerValidator = [
@@ -7,11 +6,7 @@ const createCustomerValidator = [
 		.isNumeric()
 		.withMessage("Account number should be a number")
 		.isLength({ min: 10, max: 10 })
-		.withMessage("Account number must be 10 digits")
-		.custom(async value => {
-			const user = await Customer.findOne({ account_no: value });
-			if (user) throw new Error("Account number already in use");
-		}),
+		.withMessage("Account number must be 10 digits"),
 	body("balance")
 		.optional({ checkFalsy: true })
 		.isNumeric()

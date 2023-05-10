@@ -1,35 +1,36 @@
-const Customer = require("../models/Customer");
+const { Customers } = require("../models/Customer");
 const { validationResult } = require("express-validator");
 
-const createCustomer = async (req, res) => {
+const createCustomer = (req, res) => {
 	const result = validationResult(req);
 	if (!result.isEmpty()) {
 		return res.status(400).json({ error: result.array() });
 	}
 	const { name, balance, account_no } = req.body;
 	try {
-		const newCustomer = new Customer({
+		const uid = Customers.length + 1
+		const newCustomer = {
+			id: uid,
 			name: name,
 			account_no: account_no,
-			balance: balance,
-		});
+			balance: balance || 0,
+		};
 
-		const savedCustomer = await newCustomer.save();
+		Customers.push(newCustomer);
 		return res.status(201).json({
-			customer: savedCustomer,
+			customer: newCustomer,
 		});
 	} catch (err) {
 		return res.status(500).json({ error: err.message });
 	}
 };
 
-const getCustomers = async (req, res)=> {
-	try{
-		const customers = await Customer.find().select("id name account_no balance")
-		return res.status(200).json({customers})
-	}catch(err){
-		return res.status(500).json({error: err.message})
+const getCustomers = async (req, res) => {
+	try {
+		return res.status(200).json({ customers: Customers });
+	} catch (err) {
+		return res.status(500).json({ error: err.message });
 	}
-}
+};
 
 module.exports = { createCustomer, getCustomers };
