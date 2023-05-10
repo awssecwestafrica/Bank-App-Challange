@@ -5,7 +5,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the source code from version control (e.g., Git)
-                git 'https://github.com/Taiwolawal/Bank-App-Challange.git'
+                // git 'https://github.com/Taiwolawal/Bank-App-Challange.git'
+                sh 'git -version'
                 
             }
         }
