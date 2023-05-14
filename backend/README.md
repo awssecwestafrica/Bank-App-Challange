@@ -6,8 +6,8 @@ To get started with this application, you'll need to have Node.js installed on y
 
 Once you have Node.js installed, clone this repository and install the dependencies:
 ```
-git clone https://github.com/your-username/bank-backend.git
-cd bank-backend
+git clone -b feature-backend https://github.com/iam-phenomenal/Bank-App-Challange
+cd backend
 npm install
 ```
 ## Running the Application
