@@ -14,5 +14,5 @@ jobs:
      - name: package docker image
        run: |
         #sudo apt update
-        echo "build Devops class Docker Container"
-        docker build . --file Dockerfile --tag bank-app:v1
+        echo "build Bank-App-Challange"
+        docker build . --file Dockerfile --tag bank-app-challange:v1
