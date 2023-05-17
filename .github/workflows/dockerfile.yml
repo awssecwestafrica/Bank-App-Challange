@@ -10,7 +10,7 @@ jobs:
      runs-on: ubuntu-latest
    
      steps:
-     - uses: actions/checkout@V3
+     - uses: actions/checkout@v3
      - name: package docker image
        run: |
         sudo apt update
