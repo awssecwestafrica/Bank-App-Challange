@@ -3,8 +3,13 @@ name: Bank-App Docker Container
 on: 
    push:
   #pull_requests:
+<<<<<<< HEAD
     branches: ["dev"]
 
+=======
+     branches: dev
+   
+>>>>>>> 2a5d027156ddc140333dfac1513d232c8c18c1d7
 jobs:
    Build_docker:
      runs-on: ubuntu-latest
@@ -13,6 +18,12 @@ jobs:
      - uses: actions/checkout@v3
      - name: package docker image
        run: |
+<<<<<<< HEAD
         sudo apt update
         echo build Devops class Docker Container
         docker build . --file Dockerfile --tag bank-app:v1
+=======
+        #sudo apt update
+        echo "build Bank-App-Challange"
+        docker build . --file Dockerfile --tag bank-app-challange:v1
+>>>>>>> 2a5d027156ddc140333dfac1513d232c8c18c1d7
