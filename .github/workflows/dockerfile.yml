@@ -15,4 +15,4 @@ jobs:
        run: |
         sudo apt update
         echo build Devops class Docker Container
-        docker build . --file Dockerfile --tag Bank-App:v1
+        docker build . --file Dockerfile --tag bank-app:v1
