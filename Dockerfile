@@ -7,7 +7,7 @@ WORKDIR /app
 USER deno
 
 COPY . .
-RUN deno cache server.ts
+RUN deno cache server.js
 
 CMD ["run", "--allow-net", "server.js"]
 
