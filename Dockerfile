@@ -1,13 +1,11 @@
-FROM hayd/alpine-deno:1.0.0
-
-EXPOSE 8000
-
-WORKDIR /app
-
-USER deno
-
+FROM node:alpine3.16 As build
+WORKDIR /client
 COPY . .
-RUN deno cache server.js
+RUN npm install
+RUN npm run build
 
-CMD ["run", "--allow-net", "server.js"]
+FROM nginx:1.19.0 As run
+COPY --from=build /client/build /usr/share/nginx/html
+EXPOSE 8000
+CMD ["nginx", "-g", "daemon off;"]
 
