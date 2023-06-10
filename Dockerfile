@@ -6,5 +6,6 @@ RUN npm run build
 
 FROM nginx:1.19.0 As run
 COPY --from=build /client/build /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 8000
 CMD ["nginx", "-g", "daemon off;"]
+

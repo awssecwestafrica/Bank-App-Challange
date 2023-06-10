@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deno-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deno-api
+  template:
+    metadata:
+      labels:
+        app: deno-api
+    spec:
+      containers:
+        - name: deno-api-container
+          image: your-docker-registry/your-deno-image:latest
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 200m
+              memory: 256Mi
